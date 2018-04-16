@@ -1,0 +1,32 @@
+[[source]]
+verify_ssl = true
+url = "https://pypi.python.org/simple"
+name = "pypi"
+
+[requires]
+python_version = "3.5"
+
+[packages]
+Flask = "*"
+Flask-SQLAlchemy = "*"
+Flask-WTF = "*"
+
+[dev-packages]
+# Linting
+"prospector[with_everything]" = "*"
+# Security checks
+bandit = "*"
+safety = "*"
+dependency-check = "*"
+# Unit testing and coverarge
+git-pre-commit-hook = "*"
+mock = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-html = "*"
+pytest-profiling = "*"
+pytest-xdist = "*"
+pytest-flask = "*"
+tox = "*"
+# Codacy Integration
+#codacy-coverarge

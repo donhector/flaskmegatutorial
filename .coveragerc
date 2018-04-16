@@ -1,0 +1,8 @@
+[run]
+source = .
+omit = 
+    tests/*
+    .venv/*
+    .tox/*
+    setup.py
+    *egg*

@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    image: donhector/flaskmegatutorial
+  dummy:
+    image: python:3.5-alpine
+    command: pip --version

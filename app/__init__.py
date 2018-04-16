@@ -1,6 +1,4 @@
-'''
-Flask main file
-'''
+"""Flask main application setup"""
 
 from flask import Flask
 from config import Config
@@ -11,4 +9,3 @@ APP.config.from_object(Config)
 
 # from our 'app' package, import the routes.py module
 from app import routes
-

@@ -1,8 +1,7 @@
-'''
-Configuration module for the Flask app
-'''
+"""Configuration module for the Flask app"""
 
 import os
+
 
 class Config(object):
 

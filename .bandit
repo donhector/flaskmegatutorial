@@ -1,0 +1,4 @@
+[bandit]
+exclude: .tox,.venv
+skips: B101
+# B101: assert
