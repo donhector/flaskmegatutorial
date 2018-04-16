@@ -13,13 +13,13 @@ Flask-WTF = "*"
 
 [dev-packages]
 # Linting
+pre-commit = "*"
 "prospector[with_everything]" = "*"
 # Security checks
 bandit = "*"
 safety = "*"
 dependency-check = "*"
-# Unit testing and coverarge
-git-pre-commit-hook = "*"
+# Testing and coverarge
 mock = "*"
 pytest = "*"
 pytest-cov = "*"
@@ -28,5 +28,6 @@ pytest-profiling = "*"
 pytest-xdist = "*"
 pytest-flask = "*"
 tox = "*"
+
 # Codacy Integration
 #codacy-coverarge

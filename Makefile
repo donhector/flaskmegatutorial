@@ -41,19 +41,16 @@ clean:
 	@find . -name __pycache__ -prune -exec rm -rfv {} +
 	@find . -name "*.pyc" -prune -exec rm -rfv {} +
 	@find . -name .cache -prune -exec rm -rfv {} +
-	@rm -rfv ${CI_ARTIFACTS_DIR}
+	@rm -rf dist/ build/ *egg-info/
 	@rm -fv .coverage
+	@rm -rfv ${CI_ARTIFACTS_DIR}
 
 pristine: clean
-	@rm -rfv .tox
-	@rm -rfv .venv
+	@rm -frv .tox
+	@rm -frv .venv
 
-
-update-dev:
-	pipenv update --dev
-
-update:
-	pipenv update
+precommit:
+	pipenv run pre-commit run --all-files
 
 lint:
 	@pipenv run prospector ${args}
@@ -76,7 +73,7 @@ security-depcheck:
 		--out ${CI_ARTIFACTS_DIR}/security/depcheck.html
 
 security: security-bandit security-safety security-depcheck
-	
+
 tox:
 	@pipenv run tox
 
@@ -89,7 +86,7 @@ test-unit:
 		--junit-xml=${CI_ARTIFACTS_DIR}/tests/unit/${CI_PROJECT_NAME}.xml \
 		--html=${CI_ARTIFACTS_DIR}/tests/unit/${CI_PROJECT_NAME}.html \
 		--self-contained-html
-		
+
 
 test-integration:
 	@mkdir -p ${CI_ARTIFACTS_DIR}/tests/integration
@@ -150,6 +147,8 @@ uwsgi:
 init:
 	pip install --user -U pip pipenv
 	pipenv install --dev
+	pipenv run pre-commit install
 
-install-hook:
-	git-pre-commit-hook install --force --plugins flake8 --plugins json --plugins yaml --flake8_ignore E111,E124,E126,E201,E202,E221,E241,E302,E501,N802,N803
+update:
+	pipenv run pre-commit autoupdate
+	pipenv update --dev

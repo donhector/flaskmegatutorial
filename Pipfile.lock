@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2521e40d6084c28a93d5b4ecf0fa7a3623a9acbfb36a95e1e9666232940e1395"
+            "sha256": "80d89c60ce0992cf32f2a520af91151f123f407e8e31aee1d5126d98d31a72cb"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -94,6 +94,13 @@
             ],
             "version": "==1.4"
         },
+        "aspy.yaml": {
+            "hashes": [
+                "sha256:c959530fab398e2391516bc8d5146489f9273b07d87dd8ba5e8b73406f7cc1fa",
+                "sha256:da95110d120a9168c9f43601b9cb732f006d8f193ee2c9b402c823026e4a9387"
+            ],
+            "version": "==1.1.0"
+        },
         "astroid": {
             "hashes": [
                 "sha256:35cfae47aac19c7b407b7095410e895e836f2285ccf1220336afba744cc4c5f2",
@@ -116,12 +123,26 @@
             "index": "pypi",
             "version": "==1.4.0"
         },
+        "cached-property": {
+            "hashes": [
+                "sha256:67acb3ee8234245e8aea3784a492272239d9c4b487eba2fdcce9d75460d34520",
+                "sha256:bf093e640b7294303c7cc7ba3212f00b7a07d0416c1d923465995c9ef860a139"
+            ],
+            "version": "==1.4.2"
+        },
         "certifi": {
             "hashes": [
                 "sha256:14131608ad2fd56836d33a71ee60fa1c82bc9d2c8d98b7bdbc631fe1b3cd1296",
                 "sha256:edbc3f203427eef571f79a7692bb160a2b0f7ccaa31953e99bd17e307cf63f7d"
             ],
             "version": "==2018.1.18"
+        },
+        "cfgv": {
+            "hashes": [
+                "sha256:2fbaf8d082456d8fff5a68163ff59c1025a52e906914fbc738be7d8ea5b7aa4b",
+                "sha256:733aa2f66b5106af32d271336a571610b9808e868de0ad5690d9d5155e5960c5"
+            ],
+            "version": "==1.0.0"
         },
         "chardet": {
             "hashes": [
@@ -243,19 +264,6 @@
             ],
             "version": "==1.4.1"
         },
-        "git-pre-commit-hook": {
-            "hashes": [
-                "sha256:abed7d0713c652464a475392d90c30f3556aa8319f27772f009acc6ba68e7bfc"
-            ],
-            "index": "pypi",
-            "version": "==0.0.11"
-        },
-        "git-pre-commit-hook-utils": {
-            "hashes": [
-                "sha256:47168cdf33165f186d5f8fd2f98719ade9ac9f97c73790916af6f2fabbff2fa9"
-            ],
-            "version": "==0.0.5"
-        },
         "gitdb2": {
             "hashes": [
                 "sha256:b60e29d4533e5e25bb50b7678bbc187c8f6bcff1344b4f293b2ba55c85795f09",
@@ -275,6 +283,13 @@
                 "sha256:cebc7aa2782fd813ead415ea1fae3409524343485eadc7fb60ef5bd1e810309e"
             ],
             "version": "==2017.9.19"
+        },
+        "identify": {
+            "hashes": [
+                "sha256:3da1f490e97dea9052ae7da51e63d211b7ca016968b3275e6fc0484bdf35145d",
+                "sha256:75e327eb4ea05732538c635463eca3bca7607f49dd347a01bcf0f53baa4bf120"
+            ],
+            "version": "==1.0.12"
         },
         "idna": {
             "hashes": [
@@ -367,6 +382,12 @@
             ],
             "version": "==4.1.0"
         },
+        "nodeenv": {
+            "hashes": [
+                "sha256:dd0a34001090ff042cfdb4b0c8d6a6f7ec9baa49733f00b695bb8a8b4700ba6c"
+            ],
+            "version": "==1.3.0"
+        },
         "packaging": {
             "hashes": [
                 "sha256:e9215d2d2535d3ae866c3d6efc77d5b24a0192cce0ff20e42896cc0664f889c0",
@@ -403,6 +424,14 @@
                 "sha256:e160a7fcf25762bb60efc7e171d4497ff1d8d2d75a3d0df7a21b76821ecbf5c5"
             ],
             "version": "==0.6.0"
+        },
+        "pre-commit": {
+            "hashes": [
+                "sha256:01bb5f44606735ca30c8be641fa24f5760fcc599a0260ead0067bcde2f0305f9",
+                "sha256:823452163aa9fb024a9ff30947ba7f5a2778708db7554a4d36438b9bbead6bbb"
+            ],
+            "index": "pypi",
+            "version": "==1.8.2"
         },
         "prospector": {
             "hashes": [
@@ -590,12 +619,6 @@
                 "sha256:f790cc2d8a7084a5f111384a606363fb7b78d0e486d49b34c5093859eaa358f3"
             ],
             "version": "==0.5.2"
-        },
-        "restructuredtext-lint": {
-            "hashes": [
-                "sha256:c48ca9a84c312b262809f041fe47dcfaedc9ee4879b3e1f9532f745c182b4037"
-            ],
-            "version": "==1.1.3"
         },
         "safety": {
             "hashes": [
