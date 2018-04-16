@@ -56,12 +56,15 @@ lint:
 	@pipenv run prospector ${args}
 
 security-bandit:
+	@mkdir -p ${CI_ARTIFACTS_DIR}/security
 	@pipenv run bandit -r . -f html -o ${CI_ARTIFACTS_DIR}/security/bandit.html
 
 security-safety:
+	@mkdir -p ${CI_ARTIFACTS_DIR}/security
 	@pipenv run safety check --full-report | tee ${CI_ARTIFACTS_DIR}/security/safety.txt
 
 security-depcheck:
+	@mkdir -p ${CI_ARTIFACTS_DIR}/security
 	@pipenv run dependency-check \
 		--project ${CI_PROJECT_NAME} \
 		--scan . \
@@ -87,7 +90,6 @@ test-unit:
 		--html=${CI_ARTIFACTS_DIR}/tests/unit/${CI_PROJECT_NAME}.html \
 		--self-contained-html
 
-
 test-integration:
 	@mkdir -p ${CI_ARTIFACTS_DIR}/tests/integration
 	@pipenv run pytest \
@@ -109,6 +111,7 @@ test-web: docker-up
 test: clean test-unit test-integration test-web
 
 coverage:
+	@mkdir -p ${CI_ARTIFACTS_DIR}/coverage
 	@pipenv run pytest \
 		--verbose \
 		--numprocesses=auto \
